@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo "Build Docker image started on `date`"
-      - docker build -t $ECR_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_NAME:$ECR_IMAGE_TAG $ECR_BUILD_PATH/. --build-arg ANSIBLE_VERSION=$APP_VERSION
+      - docker build -t $ECR_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY_NAME:$ECR_IMAGE_TAG $ECR_BUILD_PATH/.
   post_build:
     commands:
       - echo "Build completed on `date`"
